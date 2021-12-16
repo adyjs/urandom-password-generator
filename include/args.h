@@ -8,6 +8,7 @@
 #include "print_error.h"
 #include "pw_filter.h"
 #include "custom_character_model_parser.h"
+#include "custom_character_group_model_parser.h"
 
 /*
 #define GET_HELP                            0   // 0x00 0000_0000 -h

@@ -43,7 +43,7 @@ void option_info_check(void){
     }
     if(mode & CUSTOM_CHAR_GROUP_MODEL_OUTPUT){
         msg_concat_routine("  -Custom Characters Group Model : [");
-        msg_concat_routine(model);
+        msg_concat_routine(group_model);
         msg_concat_routine("]");
     }
     

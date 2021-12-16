@@ -29,5 +29,7 @@ char filter_rule_out_all_special_char(char ch);
 
 char filter_custom_char_model(char ch);
 
+char filter_custom_char_group_model(char ch);
+
 
 #endif /*__PW_FILTER_H__*/
