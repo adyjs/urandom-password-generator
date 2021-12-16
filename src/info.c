@@ -36,6 +36,17 @@ void option_info_check(void){
     if(mode & RULE_OUT_DIGIT_CHAR_OUTPUT){
         msg_concat_routine("  -No Digit Number Characters\n");
     }
+    if(mode & CUSTOM_CHAR_MODEL_OUTPUT){
+        msg_concat_routine("  -Custom Characters Model : [");
+        msg_concat_routine(model);
+        msg_concat_routine("]");
+    }
+    if(mode & CUSTOM_CHAR_GROUP_MODEL_OUTPUT){
+        msg_concat_routine("  -Custom Characters Group Model : [");
+        msg_concat_routine(model);
+        msg_concat_routine("]");
+    }
+    
 
     msg_concat_routine("\n\n===Password Generating From Here===\n");
 }

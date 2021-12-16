@@ -3,8 +3,9 @@
 
 #include <stdio.h>
 #include <malloc.h>
-#include "./args.h"
-#include "./pw_filter.h"
+#include "args.h"
+#include "pw_filter.h"
+#include "custom_character_model_parser.h"
 
 #define INITIAL_MSG "Password Generator\n\nSelected Mode :\n"
 

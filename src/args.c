@@ -4,6 +4,7 @@ size_t pw_len;
 unsigned char mode;
 
 ssize_t option_validate(char *option){
+    // printf("in option validate : %s\n", option);
     size_t len = strlen(option);
     if(len == 2 && *option == '-'){
         return 1;
@@ -33,22 +34,42 @@ void options(char opt){
             mode |= RULE_OUT_DIGIT_CHAR_OUTPUT;
             break;
         }
-        defualt:
+        case 'c':{
+            mode = CUSTOM_CHAR_MODEL_OUTPUT;
             break;
+        }
+        
     }
 }
 
 void mode_settings(int argc, char *argv[]){
+    unsigned char option_flag = 0; 
     if(argc < 2 || argc > 7){
         print_ERROR("Input args error, please check manual", __FUNCTION__, __LINE__);
     }
-    mode = DEFAULT_CHAR_OUTPUT;
     for(size_t i=1 ; i<argc ; i++){
         if(option_validate(argv[i]) != -1){
+            option_flag = 1;
             options(*(argv[i]+1));
+            if(*(argv[i]+1) == 'c'){
+                custom_model_parser();
+                break;
+            }
         }
     }
-    // printf("mode : %x\n", mode);
+    if(option_flag == 0 && pw_len > 0 && pw_len <= 2600){
+        mode = DEFAULT_CHAR_OUTPUT;
+    }
+    if(mode == (RULE_OUT_SP_CHAR_OUTPUT | \
+                RULE_OUT_UPPER_ALPHABET_CHAR_OUTPUT | \
+                RULE_OUT_LOWER_ALPHABET_CHAR_OUTPUT | \
+                RULE_OUT_DIGIT_CHAR_OUTPUT)){
+        print_ERROR("There is no character output for this kind of setting mode, please check -h for help.", __FUNCTION__, __LINE__);
+    }
+    // else{
+    //     return;
+    // }
+    // exit(1);
 }
 
 

@@ -7,7 +7,8 @@ SRCS = pw_gen.c \
 	   args.c \
 	   pw_source.c \
 	   pw_filter.c \
-	   info.c
+	   info.c \
+	   custom_character_model_parser.c
 
 OBJS = $(patsubst %.c, %.o, $(SRCS))
 

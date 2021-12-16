@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "sp_char_parser.h": "c",
+        "custom_character_model_parser.h": "c"
+    }
+}
