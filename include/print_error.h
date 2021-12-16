@@ -3,7 +3,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "./help.h"
+#include "help.h"
 
 void print_ERROR(const char *err_msg, \
                  const char *err_func, \
