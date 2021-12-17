@@ -54,8 +54,11 @@ please check by using "$ ./pw-generator -h" for help
 * ruled-out special characters
 ![demo_1.png](./README.files/demo_1.png)
 
+* custom characters model
+![demo_3.png](./README.files/demo_3.png)  
+
 * custom characters group model
-![demo_2.png](./README.files/demo_2.png)  
+![demo_4.png](./README.files/demo_4.png)  
 
 
 
