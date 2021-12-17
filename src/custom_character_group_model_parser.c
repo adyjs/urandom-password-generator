@@ -49,7 +49,7 @@ void custom_char_group_model_parser(void){
     memset(group_model, '\0', GROUP_MODEL_SIZE);
     memset(group_model_detail, '\0', GROUP_MODEL_DETAIL_SIZE);
     unsigned char ch;
-    printf("Input your custom characters model between [] : ");
+    printf("Input your custom characters group model between [] : ");
     do{
         ch = fgetc(stdin);
         if(printable_char_verify(ch) != -1){

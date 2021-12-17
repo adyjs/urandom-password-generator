@@ -16,8 +16,8 @@
 
 int main(int argc, char *argv[]){
 
-    mode_settings(argc, argv);
     parse_pwlen_input(argc, argv);
+    mode_settings(argc, argv);
 
     int fd = open(PW_SOURCE, O_RDONLY);
     if(fd == -1){

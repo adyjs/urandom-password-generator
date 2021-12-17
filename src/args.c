@@ -15,6 +15,7 @@ unsigned char mode;
 */
 
 void mode_verify(void){
+    // printf("in mode_verify, mode : %u\n", mode);
     if(mode == GET_HELP){
         print_ERROR("Mode options parse failed, options are seperated by space and dash \"ex. -s -u\", please check -h for help.", __FUNCTION__, __LINE__);
     }
@@ -91,11 +92,12 @@ void mode_settings(int argc, char *argv[]){
             }
         }
     }
+    // printf("%u %lu\n", option_flag, pw_len);
     if(option_flag == 0 && pw_len > 0 && pw_len <= 2600){
         mode = DEFAULT_CHAR_OUTPUT;
     }
-    mode_verify();
     // printf("mode : %u\n", mode);
+    mode_verify();
     // exit(1);
 }
 
