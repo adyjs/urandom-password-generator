@@ -48,7 +48,7 @@ void option_info_check(void){
     }
     
 
-    msg_concat_routine("\n\n===Password Generating From Here===\n");
+    msg_concat_routine("\n\n-----BEGIN PASSWORD GENERATING-----\n\n");
 }
 
 void mode_info_display_before_start(void){
@@ -58,5 +58,5 @@ void mode_info_display_before_start(void){
 }
 
 void msg_after_finished(void){
-    printf("\n===End===\n\n");
+    printf("\n\n-----END PASSWORD GENERATING-----\n\n");
 }
